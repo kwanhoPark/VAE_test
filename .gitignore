@@ -1,0 +1,15 @@
+*.js
+*.map
+*.ts
+*.pyc
+*.proto
+*.mid
+*.cfg
+.git/
+share/
+Scripts/
+Lib/
+Include/
+groove/
+.idea/
+model/
