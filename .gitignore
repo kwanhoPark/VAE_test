@@ -5,6 +5,7 @@
 *.proto
 *.mid
 *.cfg
+*.html
 .git/
 share/
 Scripts/
