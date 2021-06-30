@@ -28,25 +28,25 @@ flags.DEFINE_string(
     'master', '',
     'The TensorFlow master to use.')
 flags.DEFINE_string(
-    'examples_path', None,
+    'examples_path', 'C:/Users/82107/PycharmProjects/VAE_test/tfrecord_data/merge_file.tfrecord',
     'Path to a TFRecord file of NoteSequence examples. Overrides the config.')
 flags.DEFINE_string(
     'tfds_name', None,
     'TensorFlow Datasets dataset name to use. Overrides the config.')
 flags.DEFINE_string(
-    'run_dir', None,
+    'run_dir', 'C:/Users/82107/PycharmProjects/VAE_test/model',
     'Path where checkpoints and summary events will be located during '
     'training and evaluation. Separate subdirectories `train` and `eval` '
     'will be created within this directory.')
 flags.DEFINE_integer(
-    'num_steps', 200000,
+    'num_steps', 1000,
     'Number of training steps or `None` for infinite.')
 flags.DEFINE_integer(
     'eval_num_batches', None,
     'Number of batches to use during evaluation or `None` for all batches '
     'in the data source.')
 flags.DEFINE_integer(
-    'checkpoints_to_keep', 100,
+    'checkpoints_to_keep', 10,
     'Maximum number of checkpoints to keep in `train` mode or 0 for infinite.')
 flags.DEFINE_integer(
     'keep_checkpoint_every_n_hours', 1,
@@ -55,10 +55,10 @@ flags.DEFINE_string(
     'mode', 'train',
     'Which mode to use (`train` or `eval`).')
 flags.DEFINE_string(
-    'config', '',
+    'config', 'hier-trio_16bar',
     'The name of the config to use.')
 flags.DEFINE_string(
-    'hparams', '',
+    'hparams', 'learning_rate = 0.01',
     'A comma-separated list of `name=value` hyperparameter values to merge '
     'with those in the config.')
 flags.DEFINE_bool(
@@ -193,7 +193,7 @@ def train(train_dir,
       logging_dict = {'global_step': model.global_step,
                       'loss': model.loss}
 
-      hooks.append(tf.train.LoggingTensorHook(logging_dict, every_n_iter=100))
+      hooks.append(tf.train.LoggingTensorHook(logging_dict, every_n_iter=20))
       if num_steps:
         hooks.append(tf.train.StopAtStepHook(last_step=num_steps))
 
