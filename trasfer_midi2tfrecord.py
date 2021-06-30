@@ -32,9 +32,9 @@ import tensorflow.compat.v1 as tf
 
 FLAGS = tf.app.flags.FLAGS
 
-tf.app.flags.DEFINE_string('input_dir', 'C:/Users/82107/PycharmProjects/abc/groove',
+tf.app.flags.DEFINE_string('input_dir', 'C:/Users/82107/PycharmProjects/VAE_test/groove',
                            'Directory containing files to convert.')
-tf.app.flags.DEFINE_string('output_file', 'C:/Users/82107/PycharmProjects/abc/tfrecord_data/merge_file.tfrecord',
+tf.app.flags.DEFINE_string('output_file', 'C:/Users/82107/PycharmProjects/VAE_test/tfrecord_data/merge_file.tfrecord',
                            'Path to output TFRecord file. Will be overwritten '
                            'if it already exists.')
 tf.app.flags.DEFINE_bool('recursive', True,
