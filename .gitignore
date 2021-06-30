@@ -3,7 +3,6 @@
 *.ts
 *.pyc
 *.proto
-*.mid
 *.cfg
 *.html
 .git/
