@@ -35,16 +35,16 @@ logging = tf.logging
 FLAGS = flags.FLAGS
 
 flags.DEFINE_string(
-    'run_dir', None,
+    'run_dir', 'C:/Users/82107/PycharmProjects/VAE_test/model',
     'Path to the directory where the latest checkpoint will be loaded from.')
 flags.DEFINE_string(
-    'checkpoint_file', None,
+    'checkpoint_file', 'model_ckpt-994.meta',
     'Path to the checkpoint file. run_dir will take priority over this flag.')
 flags.DEFINE_string(
-    'output_dir', '/tmp/music_vae/generated',
+    'output_dir', 'C:/Users/82107/PycharmProjects/VAE_test/model/output',
     'The directory where MIDI files will be saved to.')
 flags.DEFINE_string(
-    'config', None,
+    'config', 'cat-drums_2bar_small',
     'The name of the config to use.')
 flags.DEFINE_string(
     'mode', 'sample',
